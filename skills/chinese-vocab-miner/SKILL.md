@@ -22,21 +22,21 @@ bun run scripts/dashu-vocab-miner-simple.ts --continue <transcript>
 
 ```bash
 # Check a video's status
-bun run scripts/dashu-vocab-miner-simple.ts --status ~/.astra/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
+bun run scripts/dashu-vocab-miner-simple.ts --status ~/.clawd/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
 
 # Start mining a new video
-bun run scripts/dashu-vocab-miner-simple.ts ~/.astra/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
+bun run scripts/dashu-vocab-miner-simple.ts ~/.clawd/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
 
 # Continue from where you left off
-bun run scripts/dashu-vocab-miner-simple.ts --continue ~/.astra/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
+bun run scripts/dashu-vocab-miner-simple.ts --continue ~/.clawd/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt
 
 # Process one chunk at a time
-bun run scripts/dashu-vocab-miner-simple.ts ~/.astra/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt 6 1
+bun run scripts/dashu-vocab-miner-simple.ts ~/.clawd/dashu-transcripts/NA_videoId_title.zh.vtt.zh.vtt 6 1
 ```
 
 ## Output
 
-Each video gets a `.vocab.json` file in `~/.astra/dashu-vocabulary/`:
+Each video gets a `.vocab.json` file in `~/.clawd/dashu-vocabulary/`:
 
 ```json
 {
@@ -44,15 +44,7 @@ Each video gets a `.vocab.json` file in `~/.astra/dashu-vocabulary/`:
   "title": "Do Your Love Yourself? | Chinese Podcast #183",
   "processedAt": "2026-01-18T19:08:00.000Z",
   "chunksProcessed": 6,
-  "vocabulary": [
-    {
-      "word": "常客",
-      "pinyin": "chángkè",
-      "definition": "Frequent guest; regular visitor",
-      "example": "卡老师是我们的常客了",
-      "level": "upper"
-    }
-  ]
+  "vocabulary": [...]
 }
 ```
 
@@ -63,7 +55,7 @@ Each video gets a `.vocab.json` file in `~/.astra/dashu-vocabulary/`:
 
 ## Files
 
-- **Transcripts**: `~/.astra/dashu-transcripts/`
-- **Vocabulary**: `~/.astra/dashu-vocabulary/`
+- **Transcripts**: `~/.clawd/dashu-transcripts/`
+- **Vocabulary**: `~/.clawd/dashu-vocabulary/`
 
 Both keyed by video ID (e.g., `yeqHX2rxeZI`).
